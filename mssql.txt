@@ -1,3 +1,9 @@
-SELECT Products.Name, Categories.Name 
-FROM Categories
-JOIN Products ON Products.Id == Categories.ProductId
+SELECT Products.Name, Categories.Name
+FROM Products
+LEFT JOIN ProductsCategories
+ON ProductsCategories.ProductId = Products.Id
+LEFT JOIN Categories
+ON ProductsCategories.CategoryId = Categories.Id
+
+Возможно неправильно понял задание, но писал с рассчетом на Таблицы Products { Id, Name }, Categories { Id, Name }, ProductsCategories { ProductId, CategoryId }
+ProductsCategories - many to many таблица для связки.
