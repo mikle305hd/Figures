@@ -1,0 +1,3 @@
+SELECT Products.Name, Categories.Name 
+FROM Categories
+JOIN Products ON Products.Id == Categories.ProductId
